@@ -1,5 +1,5 @@
-#Ensimmäinen repo
-####Aika siistiä tosijaan
+# Ensimmäinen repo
+#### Aika siistiä tosijaan
 
 Tässä ekaa kertaa myös gittiä käytetään oli vähän vaikeuksia tajua koko homma mutta *hyvin* onnistui.
 
