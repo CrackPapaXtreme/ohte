@@ -1,0 +1,68 @@
+commit 8f5e377e7cde442397bd852695e872059da480c1
+Author: CrackPapaXtreme <stathanael@proton.me>
+Date:   Thu Nov 3 22:16:19 2022 +0200
+
+    joo
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit f4d96e2aa0e5edb5a480bd2cd33c55f20f14ec40
+Author: CrackPapaXtreme <stathanael@proton.me>
+Date:   Thu Nov 3 22:08:29 2022 +0200
+
+    muutoksia kolmas ja eka
+
+ eka.txt    | 2 +-
+ kolmas.txt | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 921b8cfb4f82b9e09700f93c0248a725e5dfc2b3
+Author: CrackPapaXtreme <stathanael@proton.me>
+Date:   Thu Nov 3 22:06:15 2022 +0200
+
+    tiedosto -> eka
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 06acc038b71ec2b0b4677a80d322d504ab791661
+Author: CrackPapaXtreme <stathanael@proton.me>
+Date:   Thu Nov 3 22:05:21 2022 +0200
+
+    toinen poistettu
+
+ toinen.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f953ae1a66f2e69ff5af746ce43409512719bb73
+Author: CrackPapaXtreme <stathanael@proton.me>
+Date:   Thu Nov 3 22:00:24 2022 +0200
+
+    lisäsin kolmannen aja hakemiston
+
+ dir/jotain.txt  | 0
+ dir/jotain2.txt | 0
+ kolmas.txt      | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit f6010475d0ca1a75e6793795f974be754dc70afc
+Author: CrackPapaXtreme <stathanael@proton.me>
+Date:   Thu Nov 3 21:54:58 2022 +0200
+
+     lisäys ja muutos
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit bb9adf5654907801a7199462c8e6fb2df5527ade
+Author: CrackPapaXtreme <stathanael@proton.me>
+Date:   Thu Nov 3 21:51:00 2022 +0200
+
+    tiedosto.txt
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
