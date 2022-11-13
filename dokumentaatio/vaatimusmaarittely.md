@@ -1,8 +1,8 @@
-###Sovelluksen tarkoitus
--
+### Sovelluksen tarkoitus
+- wip
 
-###Käyttäjät
--
+### Käyttäjät
+- wip
 
-###Käyttöliittymäluonnos
--
+### Käyttöliittymäluonnos
+- wip
