@@ -10,3 +10,5 @@ Nyt kirjoitan tekstiä tekstieditorilla __nano__, joka on aika tuttu minulle. Pi
 [gitlog.txt](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
 [komentorivi.txt](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+
+[vaatimusmäärittely.md](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)

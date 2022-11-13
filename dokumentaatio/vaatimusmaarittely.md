@@ -1,0 +1,8 @@
+###Sovelluksen tarkoitus
+-
+
+###Käyttäjät
+-
+
+###Käyttöliittymäluonnos
+-
