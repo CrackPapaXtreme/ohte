@@ -15,4 +15,4 @@ Nyt kirjoitan tekstiä tekstieditorilla __nano__, joka on aika tuttu minulle. Pi
 ### Dokumentaatio
 [Vaatimusmäärittely](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[Työkirjanpito](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/dokumentaatio/tyokirjanpito.md)
+[Työaikakirjanpito](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
