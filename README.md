@@ -5,10 +5,14 @@ Tässä ekaa kertaa myös gittiä käytetään oli vähän vaikeuksia tajua koko
 
 Nyt kirjoitan tekstiä tekstieditorilla __nano__, joka on aika tuttu minulle. Pitäisikö minun oppia _vimiä_? Hmm...
 
-### Tässä linkit tehtäviin:
+## Tässä linkit tehtäviin:
 
+### Viikko1
 [gitlog.txt](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
 [komentorivi.txt](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
-[vaatimusmäärittely.md](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+### Dokumentaatio
+[Vaatimusmäärittely](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
+[Työkirjanpito](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/dokumentaatio/tyokirjanpito.md)

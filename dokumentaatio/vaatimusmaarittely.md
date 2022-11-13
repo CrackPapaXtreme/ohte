@@ -28,7 +28,10 @@ Olla pienelle yhteisölle (esimerkiksi Matrix Ry) pelistä saatujen piesteiden s
 ## Jatkokehitysideoita
 -	Adminille kyky poistaa käyttäjiä(tuloksineen)
 -	Speedrunien kirjausnäkymä ja oma leaderboardi
+	-	Speedrun on siis pelimuoto jossa pelaaja yrittää mahdollisimman nopeasti suorittaa pelin loppuun
 -	Adminille joku ilmoituslomake
+	-	Jos esimerkiksi pitää poistaa käyttäjä tai tulos
+-	Filtteri loukkaaville käyttäjänimille
 -	Osio missä näkyisi viimeisimmät ennätykset
 -	Profiilinäkymä, missä näkyisi käyttäjän kaikki tulokset pelikohtaisesti
 
