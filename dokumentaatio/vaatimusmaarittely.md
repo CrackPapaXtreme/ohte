@@ -1,29 +1,31 @@
 # Highscores!
 
-### Sovelluksen tarkoitus
-Olla pienelle yhteisölle (esimerkiksi Matrix Ry) pelistä saatujen piesteiden seuratatyökalu josta näkee kenellä on parhaat pisteet. Pistetaulukko on suuruusjärjestyksessä. Ohjelmaan voi helposti rekisteröidä uusia käyttäjänimiä(paitsi käyttäjänimeä "admin") ja tuloksia. 
+## Sovelluksen tarkoitus
+Olla pienelle yhteisölle (esimerkiksi Matrix Ry) pelistä saatujen piesteiden seuratatyökalu josta näkee kenellä on parhaat pisteet. Pistetaulukko on suuruusjärjestyksessä. Ohjelmaan voi helposti rekisteröidä uusia käyttäjänimiä(paitsi käyttäjänimeä "admin") ja omia tuloksia. 
 
-### Käyttäjät
+## Käyttäjät
 -	Käyttäjä
 	-	Käyttäjä pystyy selailemaan muiden tuloksia eri peleistä
 	-	Kun valitsee pelin niin submit-score napilla käyttäjä voi lisätä käyttäjälleen tuloksen joka näkyy pistetaulukossa
 -	Admin
 	-	Admin voi poistaa tuloksia jos esimerkiksi joku laittoi typon.
 
-### Käyttöliittymäluonnos
+## Käyttöliittymäluonnos
 ![](./gui.jpg)
 
-### Perusversion tarjoama toiminnallisuus
--	Käyttäjän lisäys-toiminnon kuuluisi toimia oikein
+## Perusversion tarjoama toiminnallisuus
+-	Käyttäjän lisäys-toiminto
 	-	Jos käyttäjänimeä ei ole aikaisemmin rekisteröity, se ilmoittaa onnistuneesta käyttäjänimen luonnista
 	-	Jos käyttäjänimi on jo aikaisemmin luotu, ilmoittaa sovellus käyttäjälle, että valitsee uuden
-	-	Käyttäjän rekisteröiminen tuloksen lisäämisen yhteydessä kuuluisi toimia oikein
--	Pistetaulun päivittymisen oikeassa järjestyksessä kuuluisi toimia oikein
+-	Tuloksien lisäys-toiminto
+	-	Jos käyttäjänimeä ei ole, tarjoaa sovellus sen rekisteröintiä
+	-	Jos käyttäjälle on rekisteröity jo parempi tulos, sovellus kertoo tästä käyttäjälle
+-	Pistetaulun päivittyminen oikeassa järjestyksessä
 -	Adminin poistotoiminnot ja uloskirjautuminen.
 	-	Jos kirjautuessa salasana on väärin, niin sovellus palauttaa "kotinäytölle"
+-	Painamalla sovelluksen logoa sovellus palauttaa kotiruudulle.
 
-
-### Jatkokehitysideoita
+## Jatkokehitysideoita
 -	Adminille kyky poistaa käyttäjiä(tuloksineen)
 -	Speedrunien kirjausnäkymä ja oma leaderboardi
 -	Adminille joku ilmoituslomake
