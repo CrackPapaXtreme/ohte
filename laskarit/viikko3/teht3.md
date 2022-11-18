@@ -17,17 +17,3 @@ sequenceDiagram
 	FuelTank-->>Engine: Fuel = 0
 	Engine-->>-Machine: Running = FALSE
 ```
-
-```mermaid
- classDiagram
-      Todo "*" --> "1" User
-      class User{
-          username
-          password
-      }
-      class Todo{
-          id
-          content
-          done
-      }
-```
