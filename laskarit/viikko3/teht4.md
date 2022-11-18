@@ -17,7 +17,7 @@ main->>laitehallinto: lisää_lukija(ratikka6)
 ratikka6->>laitehallinto: lukijat.append(ratikka6)
 laitehallinto-->>main: 
 main->>laitehallinto: lisää_lukija(bussi244)
-bussi244->>laitehallinto: lukija.append(bussi244)
+bussi244->>laitehallinto: lukijat.append(bussi244)
 laitehallinto-->>main: 
 main->>lippuluukku: lippu_luukku.osta_matkakortti("Kalle")
 lippuluukku->>kallenkortti: uusi_kortti("Kalle")
