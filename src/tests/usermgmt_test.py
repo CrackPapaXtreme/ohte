@@ -1,6 +1,6 @@
 import unittest
 import json
-from usermgmt import create_user,reset_users_json
+from usermgmt import *
 from get_local_dir import src
 
 class TestCreateUser(unittest.TestCase):
@@ -50,4 +50,13 @@ class TestCreateUser(unittest.TestCase):
         create_user("username_taken")
         self.assertFalse(create_user("username_taken"))
 
-    
+    def test_get_user_id(self):
+        reset_users_json()
+        create_user("name")
+        create_user("eman")
+        self.assertEqual(get_user_id("name"),1)
+        self.assertEqual(get_user_id("eman"),2)
+
+    def test_get_user_id_from_nonexistent_user_returns_none(self):
+        reset_users_json()
+        self.assertIsNone(get_user_id("this user doesn't exist"))

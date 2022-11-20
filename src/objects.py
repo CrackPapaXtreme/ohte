@@ -8,6 +8,8 @@ class User:
         self.highscores={}
         self.submissions=[]
 
+# Currently not in use
+"""
 class Game:
     def __init__(self, title:str, gameid:int):
         self.title=title
@@ -20,4 +22,4 @@ class Score:
         self.score=score
         self.id=userid
         self.visible=True
-        self.submission_time=time
+        self.submission_time=time"""
