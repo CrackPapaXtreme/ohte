@@ -35,7 +35,7 @@ class UserMgr:
             list=json.load(userlist)
         for user in list:
             if user["name"]==username.lower():
-                return user.index()
+                return user["id"]
         return None
 
     def get_username(self,id:int):
