@@ -45,7 +45,7 @@ class UI:
         reset_json = ttk.Button(
             master=self._root,
             text="reset json",
-            command=umgr.reset_users_json()
+            command=umgr.reset_users_json
         )
         reset_json.grid(column=3,sticky="e",padx=10,pady=10)
     
