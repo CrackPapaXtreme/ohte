@@ -1,63 +1,61 @@
-from usermgmt import create_user,reset_users_json,users
-from get_local_dir import src
+from tkinter import Tk, ttk
+from datetime import datetime
+from objects import Score
+from usermgmt import UserMgr
 
-commands={
-    "x":"x  - exit",
-    "n":"n  - create new user",
-    "r":"r  - reformat user.json",
-    "l":"l  - list all users and their IDs",
-    "c":"c  - list commands",
-    "g":"g  - select game(WIP)",
-}
-def main():
-    while True:
-        
-        #Asks for a command, rejects is if it is not found in the dict of commands
-        cmd=input("command (c to show commands):")
-        if not cmd in commands:
-            print("unknown command!")
-        
-        # Create new username with max length 24 characters
-        # If input is admin, it will ask for the admin password.
-        # Calls the function create_user() and gives user feedback based on frue/false result.
-        if cmd=="n":
-            name=str(input("username (max 24 chars): "))
-            try:
-                if len(name)>24:
-                        raise Exception("Too long!")
-            except Exception:
-                print("username too long, max. 24 chars!")
-            else:
-                if name.lower()=="admin":
-                    with open(src("adminpasswd.txt"),"r") as passwdfile:
-                        passwd=passwdfile.read()
-                    if input("admin password: ")==passwd:
-                            print("password correct!(admin mode wip)")
-                elif create_user(name):
-                    print("username registered!")
-                    continue
-                else:
-                    print("username taken, pick another one!")
+umgr=UserMgr()
 
-        # dev command resets users.json to have only admin user
-        elif cmd=="r": 
-                reset_users_json()
+class UI:
+    def __init__(self,root):
+        self._root=root
+        self._username_field= None
 
-        # prints registered users
-        elif cmd == "l":
-                users()
+    def start(self):
 
-        # prints available commands
-        elif cmd=="c":
-            for command in commands:
-                print(commands[command])
+        title = ttk.Label(master=self._root,text="Highscores!")
 
-        # maybe instead of a letter as a command the game would be chosen with id
-        elif cmd=="g":
-            print("wip")
+        self._username_field = ttk.Entry(master=self._root)
+        submit_new_username = ttk.Button(
+            master=self._root,
+            text="Create new user!",
+            command=self._click_submit_new_username)
 
-        # x to exit
-        elif cmd=="x":
-            break
+        # score list to test
+        scorelist=[Score(1000,1,datetime.now()),Score(1001,1,datetime.now()),Score(1100,1,datetime.now()),Score(1010,1,datetime.now())]
 
-main()
+        # Title on the left
+        title.grid(padx=13,pady=10)
+
+        # Blank spacer column
+        self._root.grid_columnconfigure(1, weight=1, minsize=500)
+
+        # Username field and button next to each other
+        self._username_field.grid(row=0,column=2,sticky="en",pady=14)
+        submit_new_username.grid(row=0,column=3,sticky="en",padx=10,pady=10)
+
+        """# Fuck yeah this works omg
+        for listing in scorelist:
+            scorename=ttk.Label(
+                master=self._root,
+                text=umgr.get_username(listing.id))
+            scorename.grid()
+        #############################"""
+
+
+        reset_json = ttk.Button(
+            master=self._root,
+            text="reset json",
+            command=umgr.reset_users_json()
+        )
+        reset_json.grid(column=3,sticky="e",padx=10,pady=10)
+    
+    def _click_submit_new_username(self):
+        username = self._username_field.get()
+        umgr.create_user(username)
+
+window=Tk()
+window.title("Highscores!")
+
+ui = UI(window)
+ui.start()
+window.mainloop()

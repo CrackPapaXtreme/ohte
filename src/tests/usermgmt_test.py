@@ -52,7 +52,7 @@ class TestCreateUser(unittest.TestCase):
         umgr.create_user("username_taken")
         self.assertFalse(umgr.create_user("username_taken"))
 
-    def test_get_user_id(self):
+    def test_get_user_id_from_name(self):
         umgr.reset_users_json()
         umgr.create_user("name")
         umgr.create_user("eman")
