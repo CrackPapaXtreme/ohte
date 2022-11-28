@@ -14,16 +14,17 @@ Olla pienelle yhteisölle (esimerkiksi Matrix Ry) pelistä saatujen piesteiden s
 ![](./gui.jpg)
 
 ## Perusversion tarjoama toiminnallisuus
--	Käyttäjän lisäys-toiminto
+-	Käyttäjän lisäys-toiminto ✅
 	-	Jos käyttäjänimeä ei ole aikaisemmin rekisteröity, se ilmoittaa onnistuneesta käyttäjänimen luonnista
 	-	Jos käyttäjänimi on jo aikaisemmin luotu, ilmoittaa sovellus käyttäjälle, että valitsee uuden
--	Tuloksien lisäys-toiminto
+-	Tuloksien lisäys-toiminto ✅
 	-	Jos käyttäjänimeä ei ole, tarjoaa sovellus sen rekisteröintiä
 	-	Jos käyttäjälle on rekisteröity jo parempi tulos, sovellus kertoo tästä käyttäjälle
--	Pistetaulun päivittyminen oikeassa järjestyksessä
+-	Pistetaulun päivittyminen oikeassa järjestyksessä ✅(osittain)
 -	Adminin poistotoiminnot ja uloskirjautuminen.
 	-	Jos kirjautuessa salasana on väärin, niin sovellus palauttaa "kotinäytölle"
--	Painamalla sovelluksen logoa sovellus palauttaa kotiruudulle.
+-	Painamalla sovelluksen logoa sovellus palauttaa kotiruudulle
+-	Ilmoitusruutu käyttäjän toiminnasta.
 
 ## Jatkokehitysideoita
 -	Adminille kyky poistaa käyttäjiä(tuloksineen)

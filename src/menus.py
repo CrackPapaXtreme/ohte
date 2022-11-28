@@ -3,15 +3,16 @@ from gamemgmt import GameMgr
 from usermgmt import UserMgr
 from scoremgmt import ScoreMgr
 
-umgr = UserMgr()
-gmgr = GameMgr()
-smgr = ScoreMgr()
+UMgr = UserMgr()
+GMgr = GameMgr()
+SMgr = ScoreMgr()
+
 
 class Scoreboard(tk.Frame):
     def __init__(self, parent, controller, gameid):
-        tk.Frame.__init__(self,parent)
-        self.controller=controller
-        
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
+
 
 class MainMenu(tk.Frame):
     def __init__(self, parent, controller):
@@ -26,12 +27,13 @@ class MainMenu(tk.Frame):
         submit_new_username = tk.Button(
             self,
             text="Create new user!",
-            command=lambda: umgr.create_user(self._username_field.get()))
-        self._username_field.grid(row=0, column=2, sticky="e", padx=20, pady=20)
+            command=lambda: UMgr.create_user(self._username_field.get()))
+        self._username_field.grid(
+            row=0, column=2, sticky="e", padx=20, pady=20)
         submit_new_username.grid(row=0, column=3, sticky="e", padx=20, pady=20)
 
-        for gameinfo in gmgr.game_json_list():
-            titlename = tk.Label(self, text = gameinfo["title"])
+        for gameinfo in GMgr.game_json_list():
+            titlename = tk.Label(self, text=gameinfo["title"])
             titlename.grid()
             gameselectbutton = tk.Button(
                 self,

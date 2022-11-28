@@ -12,3 +12,5 @@ Käyttöhje (toteutuu myöhemmin)
 [Työaikakirjanpito](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 [Changelog](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
+[Arkkitehtuuri](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)

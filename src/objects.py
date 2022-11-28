@@ -10,7 +10,7 @@ class User:
 
 
 class Game:
-    def __init__(self, title: str, gameid: int, about:str):
+    def __init__(self, title: str, gameid: int, about: str):
         self.title = title
         self.id = gameid
         self.about = about

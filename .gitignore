@@ -4,6 +4,5 @@ __pycache__
 htmlcov
 dump.py
 index_old.py
-src/games/*
-scoreboard.py
-mainmenu.py
+games
+junk

@@ -6,12 +6,11 @@ from dir import src
 class UserMgr:
     def reset_users_json(self):
         # users json init with admin as user 0
-        with open(src("users.json"), "w") as userlist:
+        with open(src("users.json"), "w", encoding="utf-8") as userlist:
             json.dump([vars(User("admin", 0))], userlist, indent=4)
 
-    
-    def does_user_exist(self,id:int):
-        with open(src("users.json"), "w") as userlist:
+    def does_user_exist(self, id: int):
+        with open(src("users.json"), "w", encoding="utf-8") as userlist:
             list = json.load(userlist)
         try:
             list[id]
@@ -28,7 +27,7 @@ class UserMgr:
     def create_user(self, name: str):
         if len(name) > 24 or name == "":
             return False
-        with open(src("users.json"), "r") as userlist:
+        with open(src("users.json"), "r", encoding="utf-8") as userlist:
             users = json.load(userlist)
         if self.username_taken(users, name):
             return False
@@ -38,7 +37,7 @@ class UserMgr:
         return True
 
     def get_user_id(self, username: str):
-        with open(src("users.json"), "r") as userlist:
+        with open(src("users.json"), "r", encoding="utf-8") as userlist:
             list = json.load(userlist)
         for user in list:
             if user["name"] == username.lower():
@@ -46,6 +45,6 @@ class UserMgr:
         return None
 
     def get_username(self, id: int):
-        with open(src("users.json"), "r") as userlist:
+        with open(src("users.json"), "r", encoding="utf-8") as userlist:
             list = json.load(userlist)
         return list[id]["name"]
