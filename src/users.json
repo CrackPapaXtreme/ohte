@@ -5,5 +5,33 @@
         "displayname": "admin",
         "highscores": {},
         "submissions": []
+    },
+    {
+        "name": "nati",
+        "id": 1,
+        "displayname": "nati",
+        "highscores": {},
+        "submissions": []
+    },
+    {
+        "name": "nato",
+        "id": 2,
+        "displayname": "nato",
+        "highscores": {},
+        "submissions": []
+    },
+    {
+        "name": "noniin",
+        "id": 3,
+        "displayname": "noniin",
+        "highscores": {},
+        "submissions": []
+    },
+    {
+        "name": "someone",
+        "id": 4,
+        "displayname": "someone",
+        "highscores": {},
+        "submissions": []
     }
 ]

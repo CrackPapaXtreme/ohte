@@ -1,12 +1,12 @@
 import unittest
 import json
 from usermgmt import UserMgr
-from get_local_dir import src
+from dir import src
 
 umgr = UserMgr()
 
 
-class TestCreateUser(unittest.TestCase):
+class TestUserMgr(unittest.TestCase):
     def test_reset_users_json(self):
         umgr.reset_users_json()
         with open(src("users.json"), "r") as file:

@@ -1,6 +1,6 @@
 # Changelog
 ### Viikko3
-#### Toimivat asiat:
+#### Toimivat asiat
 -   Käyttäjä voi luoda käyttäjän
     -   "admin"-nimistä käyttäjää ei voi luoda
     -   Rekisteröityä käyttäjää ei voi luoda
@@ -19,3 +19,24 @@
     -   __self.submissions__ - Listalisäykset. Pitää kirjaa kaikista lisätyistä suorituksista. 
 
 -   Muita luokkia ja komentoja lisätty dev tarkoituksiin ja tuleviin toimintoihin.
+
+### Viikko 4
+#### Uutta
+-   Pelien luontitoiminto
+    -   __GameMgr__ luokan hoitama
+    -   Luotaessa peliä, ohjelma luo uuden hakemiston hakemistoon src/games/, jonka nimi on pelin ID.
+    -   Hakemistossa on kaksi tiedostoa
+        - __gameinfo.json__ - joka sisältää pelin tiedot. Nimet, kuvaukset yms.
+        - __scores.csv__ - joka sisältää kaikki kyseiseen peliin käyttäjien luomat tulokset
+
+-   Tuloksen lisäämistoiminto
+    -   __ScoreMgr__ luokan hoitama
+    -   Kirjaa tuloksen, pelaaja-ID:n, ja päivämäärän __scores.csv__:n riville
+
+#### Muuta
+-   Koodasin listajärjestäjän käyttöliittymää varten
+    -   Antaa parhaat suorittajat ja heidän tulokset suuruusjärjestyksessä
+    -   Jos pelaajalla on monta eri suuruista tulosta, se antaa parhaimman.
+
+-   Käyttöliittymässä voi nyt vaihtaa pelinäkymään
+    -   Pelinäkymä on tällä hetkellä tyhjä

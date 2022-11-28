@@ -1,64 +1,39 @@
-from tkinter import Tk, ttk
-from datetime import datetime
-from objects import Score
-from usermgmt import UserMgr
+import tkinter as tk
+from tkinter import font as tkfont
+from menus import Scoreboard, MainMenu
+from gamemgmt import GameMgr
 
-umgr = UserMgr()
+gmgr = GameMgr
 
+class UI(tk.Tk):
+    def __init__(self, *args, **kwargs):
+        tk.Tk.__init__(self, *args, **kwargs)
 
-class UI:
-    def __init__(self, root):
-        self._root = root
-        self._username_field = None
+        self.title_font = tkfont.Font(family='Ubuntu', size=18, weight="bold")
 
-    def start(self):
-
-        title = ttk.Label(master=self._root, text="Highscores!")
-
-        self._username_field = ttk.Entry(master=self._root)
-        submit_new_username = ttk.Button(
-            master=self._root,
-            text="Create new user!",
-            command=self._click_submit_new_username)
-
-        # score list to test
-        scorelist = [Score(1000, 1, datetime.now()), Score(1001, 1, datetime.now()), Score(
-            1100, 1, datetime.now()), Score(1010, 1, datetime.now())]
-
-        # Title on the left
-        title.grid(padx=13, pady=10)
-
-        # Blank spacer column
-        self._root.grid_columnconfigure(1, weight=1, minsize=500)
-
-        # Username field and button next to each other
-        self._username_field.grid(row=0, column=2, sticky="en", pady=14)
-        submit_new_username.grid(
-            row=0, column=3, sticky="en", padx=10, pady=10)
-
-        """# Fuck yeah this works omg
-        for listing in scorelist:
-            scorename=ttk.Label(
-                master=self._root,
-                text=umgr.get_username(listing.id))
-            scorename.grid()
-        #############################"""
-
-        reset_json = ttk.Button(
-            master=self._root,
-            text="reset json",
-            command=umgr.reset_users_json
-        )
-        reset_json.grid(column=3, sticky="e", padx=10, pady=10)
-
-    def _click_submit_new_username(self):
-        username = self._username_field.get()
-        umgr.create_user(username)
+        container = tk.Frame(self)
+        container.pack(side="top", fill="both", expand=True)
+        container.grid_rowconfigure(0, weight=1)
+        container.grid_columnconfigure(0, weight=1)
 
 
-window = Tk()
-window.title("Highscores!")
+        self.frames = [MainMenu(parent=container, controller=self)]
+        self.frames[0].grid(row=0, column=0, sticky="nsew")
+        
+        for game in gmgr.game_json_list():
+            frame = Scoreboard(parent=container,controller=self, gameid=game["id"])
+            self.frames.append(frame)
 
-ui = UI(window)
-ui.start()
-window.mainloop()
+            frame.grid(row=0,column=0,sticky="nsew")
+
+        self.show_frame(0)
+
+    def show_frame(self, gameid):
+        frame = self.frames[gameid]
+        frame.tkraise()
+
+
+if __name__=="__main__":
+    app = UI()
+    app.title("Highscores!")
+    app.mainloop()

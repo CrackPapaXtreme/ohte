@@ -1,16 +1,23 @@
 import json
 from objects import User
-from get_local_dir import src
+from dir import src
 
 
 class UserMgr:
-    def __init__(self):
-        pass
-
     def reset_users_json(self):
         # users json init with admin as user 0
-        with open(src("users.json"), "w") as file:
-            json.dump([vars(User("admin", 0))], file, indent=4)
+        with open(src("users.json"), "w") as userlist:
+            json.dump([vars(User("admin", 0))], userlist, indent=4)
+
+    
+    def does_user_exist(self,id:int):
+        with open(src("users.json"), "w") as userlist:
+            list = json.load(userlist)
+        try:
+            list[id]
+            return True
+        except IndentationError:
+            return False
 
     def username_taken(self, userlist: list, username: str):
         for user in userlist:
