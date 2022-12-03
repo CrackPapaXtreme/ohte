@@ -10,7 +10,9 @@ class UI(tk.Tk):
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
 
-        self.title_font = tkfont.Font(family='Ubuntu', size=18, weight="bold")
+        self.title_font = tkfont.Font(family='Ubuntu', size=20, weight="bold")
+        self.subtitle_font = tkfont.Font(family='Ubuntu', size=18)
+        self.normal_font = tkfont.Font(family='Ubuntu', size=12)
 
         container = tk.Frame(self)
         container.pack(side="top", fill="both", expand=True)

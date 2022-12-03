@@ -17,14 +17,14 @@ class GameMgr:
 
         # Create empty csv
         with open(src(f"games/{gameid}/scores.csv"), "w", encoding="utf-8") as something:
-            pass
+            something.close()
 
     def game_json_list(self):
         templist = []
         for gameid in os.listdir(src("games")):
             with open(src(f"games/{gameid}/gameinfo.json"), "r", encoding="utf-8") as file:
                 templist.append(json.load(file))
-        return templist
+        return sorted(templist, key=lambda game: game["id"])
 
     def get_game_info(self, gameid):
         with open(src(f"games/{gameid}/gameinfo.json"), "r", encoding="utf-8") as gameinfo:
@@ -39,8 +39,3 @@ class GameMgr:
     # def remove_game_visibility(gameid):
 
     # def check_for_existing_game(title):
-
-
-if __name__ == "__main__":
-    gmr = GameMgr
-    gmr.new_game("game1")

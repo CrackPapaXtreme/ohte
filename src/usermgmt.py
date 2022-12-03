@@ -25,8 +25,8 @@ class UserMgr:
         return False  # username not taken
 
     def create_user(self, name: str):
-        if len(name) > 24 or name == "":
-            return False
+        # if len(name) > 24 or name == "":
+        #    return False
         with open(src("users.json"), "r", encoding="utf-8") as userlist:
             users = json.load(userlist)
         if self.username_taken(users, name):
