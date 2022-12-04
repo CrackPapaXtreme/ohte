@@ -32,5 +32,8 @@ class GameMgr:
             return json.load(gameinfo)
 
     def delete_all_games():
-        for game in os.listdir(src("games")):
-            shutil.rmtree(src(f"games/{game}"))
+        try:
+            shutil.rmtree(src("games"))
+        except:
+            pass
+        os.mkdir(src("games"))
