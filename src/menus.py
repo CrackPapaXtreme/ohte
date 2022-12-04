@@ -10,7 +10,7 @@ SMgr = ScoreMgr()
 
 class Scoreboard(tk.Frame):
     def __init__(self, parent, controller, gameid):
-        self._gameid=gameid
+        self._gameid = gameid
         tk.Frame.__init__(self, parent)
         self.controller = controller
         self._notify = ""
@@ -62,19 +62,21 @@ class Scoreboard(tk.Frame):
 
         submit_new_score_button = tk.Button(
             self,
-            text="Submit new score"
+            text="Submit new score",
+            command=self.add_new_score_to_scoreboard
         )
         submit_new_score_button.grid(
             row=4, column=0, padx=30, pady=10, columnspan=2, sticky="ew")
 
-        self.list_best_scores
+        self.list_best_scores()
 
         self._backbutton = tk.Button(
             self,
             text="Back to Main Menu",
             command=lambda: controller.show_frame(0)
         )
-        self._backbutton.grid(row=99,column=0,padx=20)
+        self._backbutton.grid(row=99, column=0, padx=20)
+
     def add_score_to_file(self, username, score):
         print(username)
         print(str(score))
@@ -92,31 +94,40 @@ class Scoreboard(tk.Frame):
 
     def list_best_scores(self):
         scorelist = SMgr.get_sorted_highscores_list(self._gameid)
-        scorerow=20
+        scorerow = 20
         for score in scorelist:
-            if scorerow%2:
-                fgcolor="white"
+            if not scorerow % 2:
+                bgcolor = "white"
             else:
-                fgcolor="yellow"
-            tk.Label(
-                self,
-                text=UMgr.get_displayname(score[0]),
-                font=self.controller.normal_font,
-                fg=fgcolor
-            ).grid(row=scorerow,column=0, padx= 10, sticky="e")
+                bgcolor = "gray"
             tk.Label(
                 self,
                 text=score[1],
                 font=self.controller.normal_font,
-                fg=fgcolor
-            ).grid(row=scorerow, column=2, sticky="ew")
+                bg=bgcolor
+            ).grid(row=scorerow, column=0, sticky="ew", columnspan=5)
             tk.Label(
                 self,
                 text=score[2],
                 font=self.controller.normal_font,
-                fg=fgcolor
-            ).grid(row=scorerow, column=5, sticky="w")
-            scorerow+=1
+                bg=bgcolor
+            ).grid(row=scorerow, column=4, sticky="w")
+            tk.Label(
+                self,
+                text=UMgr.get_displayname(int(score[0])),
+                font=self.controller.normal_font,
+                bg=bgcolor
+            ).grid(row=scorerow, column=0, padx=10, sticky="e")
+            scorerow += 1
+
+    def add_new_score_to_scoreboard(self):
+        if not UMgr.get_user_id(self.submit_score_username.get()) == False:
+            thescore = self.submit_score_score.get()
+            theuserid = int(UMgr.get_user_id(self.submit_score_username.get()))
+            SMgr.add_score(self._gameid, theuserid, thescore)
+            self.submit_score_score.delete(0, "end")
+            self.submit_score_username.delete(0, "end")
+            self.controller.reload_frame(self._gameid)
 
 
 class MainMenu(tk.Frame):
@@ -168,16 +179,12 @@ class MainMenu(tk.Frame):
         self._create_new_game_admin_pwd_box = tk.Entry(self)
         self._create_new_game_button = tk.Button(
             self,
-            text="Add new game(admin)",
-            command=self.add_new_game(self._create_new_game_box.get(),self._create_new_game_admin_pwd_box.get())
+            text="Add new game(admin)"
         )
-        self._create_new_game_box.grid(row=99,column=0,sticky="ew", padx=10)
-        self._create_new_game_admin_pwd_box.grid(row=99,column=1, sticky="ew", padx=10)
-        self._create_new_game_button.grid(row=99,column=2, sticky="w")
-
-        # This is for visualising the column widths
-        # for num in range(5):
-        #    tk.Entry(self).grid(column=num,row=5, sticky="we")
+        self._create_new_game_box.grid(row=99, column=0, sticky="sew", padx=10)
+        self._create_new_game_admin_pwd_box.grid(
+            row=99, column=1, sticky="sew", padx=10)
+        self._create_new_game_button.grid(row=99, column=2, sticky="sw")
 
     def create_new_user(self):
         if len(self._username_field.get()) < 32:
@@ -189,6 +196,3 @@ class MainMenu(tk.Frame):
         else:
             self._notify = "Username too long (max 24chars)"
         print(self._notify)
-
-    def add_new_game(self, title, adminpwd):
-        pass

@@ -6,14 +6,14 @@ import shutil
 
 
 class GameMgr:
-    def new_game(title: str, about: str = None):
+    def new_game(title: str):
         # Create new folder with id as name
         gameid = len(os.listdir(src("games/")))+1
         os.mkdir(src(f"games/{gameid}"))
 
         # Create gameinfo.json
         with open(src(f"games/{gameid}/gameinfo.json"), "w", encoding="utf-8") as info:
-            json.dump(vars(Game(title, gameid, about)), info)
+            json.dump(vars(Game(title, gameid)), info)
 
         # Create empty csv
         with open(src(f"games/{gameid}/scores.csv"), "w", encoding="utf-8") as something:

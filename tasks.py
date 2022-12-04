@@ -25,5 +25,9 @@ def lint(ctx):
     ctx.run("pylint src", pty=True)
 
 @task
-def firsttimesetup(ctx):
+def setup(ctx):
     ctx.run("python src/formatprogram.py", pty=True)
+
+@task
+def reset(ctx):
+    ctx.run("python src/junk/delete.py", pty=True)

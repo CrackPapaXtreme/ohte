@@ -6,10 +6,10 @@ class User:
         self.highscores = {}
         self.submissions = []
 
+
 class Game:
-    def __init__(self, title: str, gameid: int, about: str):
+    def __init__(self, title: str, gameid: int):
         self.title = title
         self.id = gameid
-        self.about = about
         self.first = None
         self.visible = True

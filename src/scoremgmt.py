@@ -15,22 +15,22 @@ class ScoreMgr:
             writer.writerow([userid, time_now, score])
             scoresheet.close()
 
-    def get_sorted_highscores_list(gameid):
+    def get_sorted_highscores_list(self, gameid):
         with open(src(f"games/{gameid}/scores.csv"), "r", encoding="utf-8") as scoresheet:
             reader = csv.reader(scoresheet)
             list = []
             for row in reader:
                 list.append(row)
-            list.sort(key=lambda a: a[2], reverse=True)
-        already = [] # List to keep track of what userids have been added to returnable list
-        highscorelist = [] # List to be returned with 10 best scores
+            list.sort(key=lambda a: int(a[2]), reverse=True)
+        already = []  # List to keep track of what userids have been added to returnable list
+        highscorelist = []  # List to be returned with 10 best scores
         for listing in list:
             # Loop which makes sure duplicate names don't appear
             # Checks if userid (listing[0]) is already added, skips if true
             if not listing[0] in already:
                 highscorelist.append(listing)
                 already.append(listing[0])
-        try: # Returns 10 best scores. If list hass less than 10 scores, it returns the list as is.
+        try:  # Returns 10 best scores. If list hass less than 10 scores, it returns the list as is.
             return highscorelist[:10]
         except IndexError:
             return highscorelist
