@@ -14,7 +14,6 @@ class Scoreboard(tk.Frame):
         self._gameid = gameid
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        self._notify = ""
 
         self.ui_title_and_game_title()
 
@@ -32,9 +31,6 @@ class Scoreboard(tk.Frame):
         title = tk.Label(self, text="Highscores!",
                          font=self.controller.title_font)
         title.grid(row=0, column=0, pady=10, padx=20)
-
-        notify = tk.Label(self, text=self._notify)
-        notify.grid(column=2, row=0)
 
         self._game_title = tk.Label(
             self,
@@ -125,40 +121,30 @@ class Scoreboard(tk.Frame):
     def add_new_score_to_scoreboard(self):
         try:
             thescore = int(self.submit_score_score.get())
-            if not UMgr.get_user_id(self.submit_score_username.get()) == False:
-                theuserid = int(UMgr.get_user_id(
-                    self.submit_score_username.get()))
-                SMgr.add_score(self._gameid, theuserid, thescore)
-                self.submit_score_score.delete(0, "end")
-                self.submit_score_username.delete(0, "end")
-                self.controller.reload_frame(self._gameid)
-        except:
+        except: 
             pass
-
-    def create_new_user(self):
-        if len(self._username_field.get()) < 32:
-            if UMgr.create_user(self._username_field.get()):
-                self._username_field.delete(0, "end")
-                self._nofity = "Username created"
-            else:
-                self._notify = "Username taken"
+        theuserid = UMgr.get_user_id(self.submit_score_username.get())
+        if not theuserid==None:
+            SMgr.add_score(self._gameid, theuserid, thescore)
+            self.submit_score_score.delete(0, "end")
+            self.submit_score_username.delete(0, "end")
+            self.controller.reload_frame(self._gameid)
         else:
-            self._notify = "Username too long (max 24chars)"
+            pass
+    def create_new_user(self):
+        if UMgr.create_user(self._username_field.get()):
+            self._username_field.delete(0, "end")
 
 
 class MainMenu(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        self._notify = ""
 
         # title
         title = tk.Label(self, text="Highscores!",
                          font=self.controller.title_font)
         title.grid(row=0, column=0, pady=10, padx=20)
-
-        notify = tk.Label(self, text=self._notify)
-        notify.grid(column=2, row=0)
 
         self.ui_configure_columns()
 
@@ -229,14 +215,8 @@ class MainMenu(tk.Frame):
         self.grid_columnconfigure(4, minsize=200, weight=1)
 
     def create_new_user(self):
-        if len(self._username_field.get()) < 32:
-            if UMgr.create_user(self._username_field.get()):
-                self._username_field.delete(0, "end")
-                self._notify = "Username created"
-            else:
-                self._notify = "Username taken"
-        else:
-            self._notify = "Username too long (max 24chars)"
+        if UMgr.create_user(self._username_field.get()):
+            self._username_field.delete(0, "end")
 
     def add_new_game(self):
         name = self._create_new_game_box.get()

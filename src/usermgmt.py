@@ -42,7 +42,7 @@ class UserMgr:
         for user in list:
             if user["name"] == username.lower():
                 return user["id"]
-        return False
+        return None
 
     def get_displayname(self, id: int):
         with open(src("users.json"), "r", encoding="utf-8") as userlist:
