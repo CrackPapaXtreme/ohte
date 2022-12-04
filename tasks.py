@@ -23,3 +23,7 @@ def format(ctx):
 @task
 def lint(ctx):
     ctx.run("pylint src", pty=True)
+
+@task
+def firsttimesetup(ctx):
+    ctx.run("python src/formatprogram.py", pty=True)

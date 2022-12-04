@@ -22,13 +22,18 @@ class ScoreMgr:
             for row in reader:
                 list.append(row)
             list.sort(key=lambda a: a[2], reverse=True)
-        already = []
-        highscorelist = []
+        already = [] # List to keep track of what userids have been added to returnable list
+        highscorelist = [] # List to be returned with 10 best scores
         for listing in list:
+            # Loop which makes sure duplicate names don't appear
+            # Checks if userid (listing[0]) is already added, skips if true
             if not listing[0] in already:
                 highscorelist.append(listing)
                 already.append(listing[0])
-        return highscorelist
+        try: # Returns 10 best scores. If list hass less than 10 scores, it returns the list as is.
+            return highscorelist[:10]
+        except IndexError:
+            return highscorelist
 
     def delete_all_scores():
         for gamedir in os.listdir(src("games")):

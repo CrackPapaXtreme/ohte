@@ -44,7 +44,11 @@ class UserMgr:
                 return user["id"]
         return None
 
-    def get_username(self, id: int):
+    def get_displayname(self, id: int):
         with open(src("users.json"), "r", encoding="utf-8") as userlist:
             list = json.load(userlist)
-        return list[id]["name"]
+        return list[id]["displayname"]
+
+if __name__ == "__main__":
+    UMgr=UserMgr
+    UMgr.reset_users_json

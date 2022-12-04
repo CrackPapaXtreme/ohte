@@ -5,3 +5,6 @@ __Käyttäjätunnuksia rekisteröidään__ oikean yläkulman tekstikentällä ja
 Voit valita minkä pelin pisteitä haluat lueskella, painamalla isoja nappeja, joissa lukee pelin nimi. Pelejä voi olla useita.
 
 Voit luoda käyttäjätunnuksellasi __uuden tuloksen__ peliin pelinäkymässä. Täytä tekstikentät ja paina nappia. Varmista, että kirjoitit käyttäjä nimesi oikein.
+'
+
+font
