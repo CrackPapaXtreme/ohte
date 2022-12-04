@@ -22,15 +22,19 @@ Käyttäkää vähintään python-versiota ```3.8```
 ## Asennus ja käyttöönotto
 
 __Lataa__ ja __pura__ ```v1.0.0.zip``` koneellesi johonkin hakemistoon ja avaa sinne konmentokehote.
+
 __Asenna__ riippuvuudet komennolla:
 ```
 poetry install
 ```
+
 __Alusta__ sovellus, kun otat sen ekaa kertaa käyttöön komennolla:
 ```
 poetry run invoke setup
 ```
+
 __Vaihtoehtoisesti__ voit generoida esimerkkinäkymän komennolla ```poetry run invoke gen```, joka lisää 4 peliä ja 10 käyttäjää, joista kullakin on oma tulos kussakin pelissä.
+
 __Käynnistä__ sovellus komennolla:
 ```
 poetry run invoke start
