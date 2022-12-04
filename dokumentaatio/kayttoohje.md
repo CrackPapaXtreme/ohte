@@ -12,3 +12,4 @@ Ohjelman voi käynnistää komennolla ```poetry run invoke start```
 ### Sovelluksen käyttö
 Sovelluksen ensinäkymä on seuraavanlainen:
 
+WIP
