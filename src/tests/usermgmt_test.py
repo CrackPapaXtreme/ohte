@@ -53,4 +53,4 @@ class TestUserMgr(unittest.TestCase):
 
     def test_get_user_id_from_nonexistent_user_returns_none(self):
         umgr.reset_users_json()
-        self.assertNone(umgr.get_user_id("this user doesn't exist"))
+        self.assertIsNone(umgr.get_user_id("this user doesn't exist"))
