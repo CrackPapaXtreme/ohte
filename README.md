@@ -38,7 +38,7 @@ __Käynnistä__ sovellus komennolla:
 poetry run invoke start
 ```
 
-__Vaihtoehtoisesti__ voit generoida esimerkkinäkymän komennolla ```poetry run invoke setup```, joka lisää 4 peliä ja 10 käyttäjää, joista kullakin on oma tulos kussakin pelissä.
+__Vaihtoehtoisesti__ voit generoida esimerkkinäkymän komennolla ```poetry run invoke gen```, joka lisää 4 peliä ja 10 käyttäjää, joista kullakin on oma tulos kussakin pelissä.
 
 ## Komentorivitoiminnot
 
