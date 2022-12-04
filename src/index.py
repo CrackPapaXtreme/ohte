@@ -38,6 +38,7 @@ class UI(tk.Tk):
     def reload_frame(self, id):
         self.destroy()
         self.__init__()
+        self.title("Highscores!")
         self.show_frame(id)
 
 

@@ -122,7 +122,7 @@ class Scoreboard(tk.Frame):
         try:
             thescore = int(self.submit_score_score.get())
         except: 
-            pass
+            return
         theuserid = UMgr.get_user_id(self.submit_score_username.get())
         if not theuserid==None:
             SMgr.add_score(self._gameid, theuserid, thescore)
