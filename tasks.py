@@ -26,8 +26,8 @@ def lint(ctx):
 
 @task
 def setup(ctx):
-    ctx.run("python src/formatprogram.py", pty=True)
+    ctx.run("python src/setup.py", pty=True)
 
 @task
-def reset(ctx):
-    ctx.run("python src/junk/delete.py", pty=True)
+def gen(ctx):
+    ctx.run("python src/somegen.py", pty=True)

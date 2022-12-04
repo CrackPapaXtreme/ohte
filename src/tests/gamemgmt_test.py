@@ -10,8 +10,8 @@ gmgr = GameMgr
 class TestGameMgr(unittest.TestCase):
     def test_create_new_game(self):
         gmgr.delete_all_games()
-        gmgr.new_game("game1")
-        gmgr.new_game("game2")
+        gmgr.new_game(None, "game1")
+        gmgr.new_game(None, "game2")
         self.assertEqual(
             sorted(os.listdir(src("games")),
                    key=lambda element: int(element)), ["1", "2"])

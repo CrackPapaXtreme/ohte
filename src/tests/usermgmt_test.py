@@ -11,8 +11,7 @@ class TestUserMgr(unittest.TestCase):
         umgr.reset_users_json()
         with open(src("users.json"), "r") as file:
             content = json.load(file)
-        self.assertEqual([{"name": "admin", "id": 0, "displayname": "admin",
-                         "highscores": {}, "submissions": []}], content)
+        self.assertEqual([], content)
 
     def test_create_user(self):
         umgr.reset_users_json()
@@ -24,25 +23,14 @@ class TestUserMgr(unittest.TestCase):
         self.assertEqual(
             [
                 {
-                    "name": "admin",
-                    "id": 0,
-                    "displayname": "admin",
-                    "highscores": {},
-                    "submissions": []
-                },
-                {
                     "name": "nati",
-                    "id": 1,
-                    "displayname": "nati",
-                    "highscores": {},
-                    "submissions": []
+                    "id": 0,
+                    "displayname": "nati"
                 },
                 {
                     "name": "crackpapaxtreme",
-                    "id": 2,
-                    "displayname": "CrackPapaXtreme",
-                    "highscores": {},
-                    "submissions": []
+                    "id": 1,
+                    "displayname": "CrackPapaXtreme"
                 }
             ], content)
 
@@ -60,9 +48,9 @@ class TestUserMgr(unittest.TestCase):
         umgr.reset_users_json()
         umgr.create_user("name")
         umgr.create_user("eman")
-        self.assertEqual(umgr.get_user_id("name"), 1)
-        self.assertEqual(umgr.get_user_id("eman"), 2)
+        self.assertEqual(umgr.get_user_id("name"), 0)
+        self.assertEqual(umgr.get_user_id("eman"), 1)
 
     def test_get_user_id_from_nonexistent_user_returns_none(self):
         umgr.reset_users_json()
-        self.assertIsNone(umgr.get_user_id("this user doesn't exist"))
+        self.assertFalse(umgr.get_user_id("this user doesn't exist"))

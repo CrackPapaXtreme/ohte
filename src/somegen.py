@@ -6,7 +6,7 @@ from random import randint
 GameMgr.delete_all_games()
 UserMgr.reset_users_json(self=None)
 for num in range(1, 5):
-    GameMgr.new_game(f"Game{num}")
+    GameMgr.new_game(None, f"Game{num}")
 for num in range(1, 11):
     UserMgr.create_user_test(f"User{num}")
 for gid in range(1, 5):

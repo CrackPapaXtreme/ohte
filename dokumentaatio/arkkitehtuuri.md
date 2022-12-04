@@ -31,7 +31,7 @@ class GameManager{
     read game info
 }
 class Admin{
-    can create games
+    can create games with password
 }
 class ScoreManager{
     create score

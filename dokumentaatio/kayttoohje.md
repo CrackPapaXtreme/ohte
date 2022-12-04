@@ -1,10 +1,14 @@
-## Käyttöohje
+# Käyttöohje
 
-__Käyttäjätunnuksia rekisteröidään__ oikean yläkulman tekstikentällä ja napilla. Rekisteröidessä käyttäjää, jos teksti katoaa laatikosta, niin se on rekisteröity onnistuneesti. Jos tekti pysyy laatikossa, se on joko varattu, tai liian pitkä käyttäjänimi.
+### Asennus
+1.   Lataa repositorio koneelle johonkin hakemistoon githubista
+2.   Avaa terminaali juurihakemistoon ja lataa riippuvuudet komennolla ```poetry install```
+3. Alusta sovellus komennolla ```poetry run invoke setup```
+4. (Vaihtoehtoinen) Generoi sovellukseen esimerkkinäkymä komennolla ```poetry run invoke gen```
 
-Voit valita minkä pelin pisteitä haluat lueskella, painamalla isoja nappeja, joissa lukee pelin nimi. Pelejä voi olla useita.
+### Käynnistäminen
+Ohjelman voi käynnistää komennolla ```poetry run invoke start```
 
-Voit luoda käyttäjätunnuksellasi __uuden tuloksen__ peliin pelinäkymässä. Täytä tekstikentät ja paina nappia. Varmista, että kirjoitit käyttäjä nimesi oikein.
-'
+### Sovelluksen käyttö
+Sovelluksen ensinäkymä on seuraavanlainen:
 
-font

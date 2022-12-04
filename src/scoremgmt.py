@@ -40,12 +40,3 @@ class ScoreMgr:
             file = open(
                 src(f"games/{gamedir}/scores.csv"), "w", encoding="utf-8")
             file.close()
-
-
-if __name__ == "__main__":
-    sm = ScoreMgr
-    sm.delete_all_scores()
-    # for num in range(50):
-    #    sm.add_score(1,randint(1,15),randint(1,1000))
-    # for a in sm.get_sorted_highscores_list(1):
-    #    print(str(a))
