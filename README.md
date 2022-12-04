@@ -1,5 +1,5 @@
 # Highscores!
-Tämä sovellus pitää kirjaa pelaajista, jotka ovat saavuttaneet parhaan suorituksen kussakin videopelissä. Käyttäjänä voit rekisteröidä käyttäjätunnuksen ja sen jälkeen lisätä suorituksiasi. Voit myös katsella muiden suorituksia. Tämä sovellus voisi olla hyödyksi jossakin pienessä yhteisössä esimerkiksi Helsingin yliopiston oma Matrix Ry, missä pelataan mm. NES ja SNES pelejä!
+Tämä sovellus pitää kirjaa 10:stä parhaasta pelaajista, jotka ovat saavuttaneet parhaan suorituksen kussakin videopelissä. Käyttäjänä voit rekisteröidä käyttäjätunnuksen ja sen jälkeen lisätä suorituksiasi. Voit myös katsella muiden suorituksia. Tämä sovellus voisi olla hyödyksi jossakin pienessä yhteisössä esimerkiksi Helsingin yliopiston oma Matrix Ry, missä pelataan mm. NES ja SNES pelejä!
 
 
 ## Python versio
