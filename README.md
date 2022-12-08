@@ -39,6 +39,8 @@ __Käynnistä__ sovellus komennolla:
 ```
 poetry run invoke start
 ```
+__Lisätäkseen__ pelejä, käytä salasanaa `yay`
+
 
 ## Komentorivitoiminnot
 
