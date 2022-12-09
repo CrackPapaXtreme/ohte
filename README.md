@@ -47,7 +47,7 @@ __Lisätäkseen__ pelejä, käytä salasanaa `yay`
 ### Testaus
 Ohjelman voi testata komennolla:
 ```
-poetry run invoke gen
+poetry run invoke test
 ```
 ### Testikattavuus
 Testikattavuusraportin saa komennolla(testaa ohjelman samalla):
