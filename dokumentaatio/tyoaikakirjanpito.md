@@ -10,3 +10,4 @@
 |Ma 28.11.|6|Käyttöliittymä koodattu uudelleen ja nyt toimii pelien pistetaulukkonäkymiin vaihtaminen. Täll hetkellä ei pääse takaisin mainmenuun. Testit.|
 |La 3.12.|5|Kehitin pääosin käyttöliittymää tänään. Nyt sovellus automaattisesti luo napit peleihin sen mukaan, mitä pelejä on. Napit ja tekstikentät ovat nyt hyvissä paikoissa. Dokumentaatio|
 |Su 4.12.|11|Käyttöliittymä valmiiksi ja tämän viikon dokumentaatio.|
+|Ma 12.12.|2|Dokumentaatio.|

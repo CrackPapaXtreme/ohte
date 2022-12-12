@@ -4,14 +4,14 @@
 Olla pienelle yhteisölle (esimerkiksi Matrix Ry) pelistä saatujen piesteiden seuratatyökalu josta näkee kenellä on parhaat pisteet. Pistetaulukko on suuruusjärjestyksessä. Ohjelmaan voi helposti rekisteröidä uusia käyttäjänimiä(paitsi käyttäjänimeä "admin") ja omia tuloksia. 
 
 ## Käyttäjät
--	Käyttäjä
+-	Käyttäjä✅
 	-	Käyttäjä pystyy selailemaan muiden tuloksia eri peleistä
 	-	Kun valitsee pelin niin submit-score napilla käyttäjä voi lisätä käyttäjälleen tuloksen joka näkyy pistetaulukossa
--	Admin
+-	Admin✅
 	-	Admin voi poistaa tuloksia jos esimerkiksi joku laittoi typon.
 
 ## Käyttöliittymäluonnos
-![](./gui.jpg)
+![](./pics/gui.jpg)
 
 ## Perusversion tarjoama toiminnallisuus
 -	Käyttäjän lisäys-toiminto ✅

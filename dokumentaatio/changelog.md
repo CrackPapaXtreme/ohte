@@ -1,5 +1,8 @@
 # Changelog
 
+## Viikko 6
+-   Siistitty käyttöliittymää vähän.
+
 ## Viikko 5
 ### Uutta
 -   Toimiva käyttöliittymä!
