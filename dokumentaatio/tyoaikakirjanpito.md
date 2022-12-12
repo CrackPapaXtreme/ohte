@@ -1,5 +1,5 @@
 # Työaikakirjanpito
-### Työtunteja yhteensä: 37
+### Työtunteja yhteensä: 41
 |Päivä|Työtunnit|Mitä tein|
 |---|---|---|
 |Su 13.11.|1|Vaatimusmäärittely|
@@ -10,4 +10,4 @@
 |Ma 28.11.|6|Käyttöliittymä koodattu uudelleen ja nyt toimii pelien pistetaulukkonäkymiin vaihtaminen. Täll hetkellä ei pääse takaisin mainmenuun. Testit.|
 |La 3.12.|5|Kehitin pääosin käyttöliittymää tänään. Nyt sovellus automaattisesti luo napit peleihin sen mukaan, mitä pelejä on. Napit ja tekstikentät ovat nyt hyvissä paikoissa. Dokumentaatio|
 |Su 4.12.|11|Käyttöliittymä valmiiksi ja tämän viikon dokumentaatio.|
-|Ma 12.12.|2|Dokumentaatio.|
+|Ma 12.12.|4|Dokumentaatio ja koodin siistiminen.|
