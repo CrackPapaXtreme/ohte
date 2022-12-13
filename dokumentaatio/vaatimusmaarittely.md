@@ -10,9 +10,6 @@ Olla pienelle yhteisölle (esimerkiksi Matrix Ry) pelistä saatujen piesteiden s
 -	Admin✅
 	-	Admin voi lisätä uusia pelejä.✅
 
-## Käyttöliittymäluonnos
-![](./pics/gui.jpg)
-
 ## Perusversion tarjoama toiminnallisuus
 -	Käyttäjän lisäys-toiminto ✅
 	-	Jos käyttäjänimeä ei ole aikaisemmin rekisteröity, se luo käyttäjän✅
@@ -25,6 +22,9 @@ Olla pienelle yhteisölle (esimerkiksi Matrix Ry) pelistä saatujen piesteiden s
 -	Pistetaulun päivittyminen oikeassa järjestyksessä✅
 -	Kellonaika näkyville pistetaulukkoon.
 
+
+## Käyttöliittymäluonnos
+![](./pics/gui.jpg)
 
 ## Jatkokehitysideoita
 -	Ilmoitustoiminto, joka ilmoittaa käyttäjän toiminnasta
