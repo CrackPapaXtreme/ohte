@@ -24,6 +24,9 @@ Olla pienelle yhteisölle (esimerkiksi Matrix Ry) pelistä saatujen piesteiden s
 
 
 ## Käyttöliittymäluonnos
+
+Käyttöliittymäluonnos eroaa toteutuneesta käyttöliittymästä.
+
 ![](./pics/gui.jpg)
 
 ## Jatkokehitysideoita
