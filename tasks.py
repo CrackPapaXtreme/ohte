@@ -26,8 +26,8 @@ def lint(ctx):
 
 @task
 def setup(ctx):
-    ctx.run("python src/setup.py", pty=True)
+    ctx.run("python src/misc/setup.py", pty=True)
 
 @task
 def gen(ctx):
-    ctx.run("python src/somegen.py", pty=True)
+    ctx.run("python src/misc/somegen.py", pty=True)

@@ -10,4 +10,6 @@ def src(filename: str = None):
     Returns:
         string: file location as string
     """
-    return os.path.join(os.path.dirname(__file__), filename)
+    dir_of_self = os.path.dirname(__file__)
+    parent_dir = os.path.join(dir_of_self,os.pardir)
+    return os.path.join(parent_dir,filename)

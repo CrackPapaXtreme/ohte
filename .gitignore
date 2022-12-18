@@ -4,6 +4,4 @@ __pycache__
 htmlcov
 dump.py
 index_old.py
-games
-junk
-users.json
+data

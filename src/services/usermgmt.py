@@ -1,13 +1,13 @@
 import json
-from objects import User
-from dir import src
+from misc.objects import User
+from misc.dir import src
 
 
 class UserMgr:
     def reset_users_json(self):
         """Deletes all users by setting the contents of users.json to just [].
         """
-        with open(src("users.json"), "w", encoding="utf-8") as userlist:
+        with open(src("data/users.json"), "w", encoding="utf-8") as userlist:
             json.dump([], userlist, indent=4)
 
     def username_taken(self, username: str):
@@ -19,14 +19,15 @@ class UserMgr:
         Returns:
             boolean : True or false depending on if user is taken or not.
         """
-        with open(src("users.json"), "r", encoding="utf-8") as users:
+        with open(src("data/users.json"), "r", encoding="utf-8") as users:
             userlist = json.load(users)
+            users.close()
         for user in userlist:
             if user["name"] == username.lower():
                 return True
         return False
 
-    def create_user(self, name: str):
+    def create_user(self, inputname: str):
         """Creates new user if it is not taken already and if the length of the username is under 32
         characters
 
@@ -36,15 +37,21 @@ class UserMgr:
         Returns:
             boolean : True if the username was created successfully, false if not.
         """
-        with open(src("users.json"), "r", encoding="utf-8") as userlist:
+        name = self.remove_whitespace(inputname)
+        with open(src("data/users.json"), "r", encoding="utf-8") as userlist:
             users = json.load(userlist)
-        if len(name) > 32:
+            userlist.close()
+        if name == "":
+            self.list_users(users)
+            return False
+        if not self.check_if_allowed(name):
             return False
         if self.username_taken(name):
             return False
         users.append(vars(User(name, len(users))))
-        with open(src("users.json"), "w", encoding="utf-8") as userlist:
+        with open(src("data/users.json"), "w", encoding="utf-8") as userlist:
             json.dump(users, userlist, indent=4)
+            userlist.close()
         return True
 
     def get_user_id(self, username: str):
@@ -56,8 +63,9 @@ class UserMgr:
         Returns:
             None if the user is not found, userID (int) if it is found.
         """
-        with open(src("users.json"), "r", encoding="utf-8") as userlist:
+        with open(src("data/users.json"), "r", encoding="utf-8") as userlist:
             templist = json.load(userlist)
+            userlist.close()
         for user in templist:
             if user["name"] == username.lower():
                 return user["id"]
@@ -72,6 +80,42 @@ class UserMgr:
         Returns:
             str: Displayname
         """
-        with open(src("users.json"), "r", encoding="utf-8") as userlist:
+        with open(src("data/users.json"), "r", encoding="utf-8") as userlist:
             templist = json.load(userlist)
+            userlist.close()
         return templist[uid]["displayname"]
+    
+    def remove_whitespace(self, input:str):
+        """Returns string without whitespace to prevent similar names from being created " "
+
+        Args:
+            input (str): string to remove whitespace from
+
+        Returns:
+            string : without whitespace
+        """
+        return input.replace(" ","")
+
+    def check_if_allowed(self, input:str):
+        """Checks if username is too long or on blacklist
+
+        Args:
+            input (str): username to check
+
+        Returns:
+            Boolean : True of false depending on if it is allowed
+        """
+        if len(input)>32:
+            return False
+        with open(src("data/usernameblacklist.txt"),"r",encoding="utf-8") as blacklist:
+            for line in blacklist:
+                if line in input:
+                    return False
+            blacklist.close()
+        return True
+
+    def list_users(self, ulist):
+        print("Registered usernames:")
+        for user in ulist:
+            print(user["displayname"])
+        print("")

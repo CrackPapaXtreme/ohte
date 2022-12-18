@@ -1,7 +1,7 @@
 from random import randint
-from usermgmt import UserMgr
-from gamemgmt import GameMgr
-from scoremgmt import ScoreMgr
+from services.usermgmt import UserMgr
+from services.gamemgmt import GameMgr
+from services.scoremgmt import ScoreMgr
 
 UMgr = UserMgr()
 GMgr = GameMgr()

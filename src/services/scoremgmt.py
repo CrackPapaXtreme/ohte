@@ -1,7 +1,7 @@
 from datetime import datetime
 import csv
 import os
-from dir import src
+from misc.dir import src
 
 
 class ScoreMgr:
@@ -14,7 +14,7 @@ class ScoreMgr:
             score : Score to submit.
         """
         time_now = datetime.now().strftime("%d.%m.%Y")
-        with open(src(f"games/{gameid}/scores.csv"), "a", encoding="utf-8") as scoresheet:
+        with open(src(f"data/games/{gameid}/scores.csv"), "a", encoding="utf-8") as scoresheet:
             writer = csv.writer(scoresheet)
             writer.writerow([userid, time_now, score])
             scoresheet.close()
@@ -30,7 +30,7 @@ class ScoreMgr:
         Returns:
             list : List of elements with a format of [userid,date,score]
         """
-        with open(src(f"games/{gameid}/scores.csv"), "r", encoding="utf-8") as scoresheet:
+        with open(src(f"data/games/{gameid}/scores.csv"), "r", encoding="utf-8") as scoresheet:
             reader = csv.reader(scoresheet)
             templist = []
             for row in reader:
@@ -50,6 +50,6 @@ class ScoreMgr:
     def delete_all_scores(self):
         """Function used for setting up the program and tests.
         """
-        for gamedir in os.listdir(src("games")):
-            with open(src(f"games/{gamedir}/scores.csv"), "w", encoding="utf-8") as file:
+        for gamedir in os.listdir(src("data/games")):
+            with open(src(f"data/games/{gamedir}/scores.csv"), "w", encoding="utf-8") as file:
                 file.close()
