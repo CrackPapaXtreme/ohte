@@ -11,5 +11,5 @@ def src(filename: str = None):
         string: file location as string
     """
     dir_of_self = os.path.dirname(__file__)
-    parent_dir = os.path.join(dir_of_self,os.pardir)
-    return os.path.join(parent_dir,filename)
+    parent_dir = os.path.join(dir_of_self, os.pardir)
+    return os.path.join(parent_dir, filename)

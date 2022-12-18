@@ -1,7 +1,8 @@
 from random import randint
-from services.usermgmt import UserMgr
-from services.gamemgmt import GameMgr
 from services.scoremgmt import ScoreMgr
+from services.gamemgmt import GameMgr
+from services.usermgmt import UserMgr
+from misc.setup import format_program
 
 UMgr = UserMgr()
 GMgr = GameMgr()
@@ -13,8 +14,7 @@ of a random value between 1 and 1000.
 
 
 def gen():
-    GMgr.delete_all_games()
-    UMgr.reset_users_json()
+    format_program()
     for num in range(1, 5):
         GMgr.new_game(f"Game{num}")
     for num in range(1, 11):
@@ -28,4 +28,5 @@ def gen():
             )
 
 
-gen()
+if __name__ == "__main__":
+    gen()

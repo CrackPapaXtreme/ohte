@@ -9,7 +9,6 @@ GMgr = GameMgr
 
 class UI(tk.Tk):
     def __init__(self):
-        self.notification = ""
 
         tk.Tk.__init__(self)
 

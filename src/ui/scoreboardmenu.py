@@ -125,7 +125,7 @@ class Scoreboard(tk.Frame):
         ).grid(row=11, column=0, sticky="e")
         tk.Label(
             self,
-            text="Date",
+            text="Time",
             font=self.controller.normal_font
         ).grid(row=11, column=2, sticky="ew")
         tk.Label(

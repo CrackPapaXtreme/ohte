@@ -2,8 +2,8 @@
 Tämä sovellus pitää kirjaa 10:stä parhaasta pelaajista, jotka ovat saavuttaneet parhaan suorituksen kussakin videopelissä. Käyttäjänä voit rekisteröidä käyttäjätunnuksen ja sen jälkeen lisätä suorituksiasi. Voit myös katsella muiden suorituksia. Tämä sovellus voisi olla hyödyksi jossakin pienessä yhteisössä esimerkiksi Helsingin yliopiston oma Matrix Ry, missä pelataan mm. NES ja SNES pelejä!
 
 
-## Python versio
-Käyttäkää vähintään python-versiota ```3.8```
+## Python versio ja käyttöjärjestelmä
+Käyttäkää vähintään python-versiota ```3.8``` linuxilla.
 
 
 ## Dokumentaatio
@@ -21,7 +21,7 @@ Käyttäkää vähintään python-versiota ```3.8```
 
 ## Asennus ja käyttöönotto
 
-__1. Lataa__ ja __pura__ ```v1.0.0.zip``` koneellesi johonkin hakemistoon ja avaa sinne konmentokehote.
+__1. Lataa__ ja __pura__ viimeisimmän releasen lähdekoodi koneellesi johonkin hakemistoon ja avaa sinne komentokehote.
 
 __2. Asenna__ riippuvuudet komennolla:
 ```
@@ -39,7 +39,7 @@ __4. Käynnistä__ sovellus komennolla:
 ```
 poetry run invoke start
 ```
-__Lisätäkseen__ pelejä, käytä salasanaa `yay`
+__Lisätäkseen__ pelejä, käytä salasanaa `yay`.
 
 
 ## Komentorivitoiminnot

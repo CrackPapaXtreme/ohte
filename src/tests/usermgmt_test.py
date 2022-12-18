@@ -1,7 +1,7 @@
 import unittest
 import json
-from usermgmt import UserMgr
-from dir import src
+from services.usermgmt import UserMgr
+from misc.dir import src
 
 umgr = UserMgr()
 
@@ -9,7 +9,7 @@ umgr = UserMgr()
 class TestUserMgr(unittest.TestCase):
     def test_reset_users_json(self):
         umgr.reset_users_json()
-        with open(src("users.json"), "r") as file:
+        with open(src("data/users.json"), "r") as file:
             content = json.load(file)
         self.assertEqual([], content)
 
@@ -18,7 +18,7 @@ class TestUserMgr(unittest.TestCase):
         # creates two users and checks if they are written
         self.assertTrue(umgr.create_user("nati"))
         self.assertTrue(umgr.create_user("CrackPapaXtreme"))
-        with open(src("users.json"), "r") as file:
+        with open(src("data/users.json"), "r") as file:
             content = json.load(file)
         self.assertEqual(
             [

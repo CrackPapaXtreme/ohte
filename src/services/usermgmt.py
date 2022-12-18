@@ -84,8 +84,8 @@ class UserMgr:
             templist = json.load(userlist)
             userlist.close()
         return templist[uid]["displayname"]
-    
-    def remove_whitespace(self, input:str):
+
+    def remove_whitespace(self, userinput: str):
         """Returns string without whitespace to prevent similar names from being created " "
 
         Args:
@@ -94,9 +94,9 @@ class UserMgr:
         Returns:
             string : without whitespace
         """
-        return input.replace(" ","")
+        return userinput.replace(" ", "")
 
-    def check_if_allowed(self, input:str):
+    def check_if_allowed(self, userinput: str):
         """Checks if username is too long or on blacklist
 
         Args:
@@ -105,11 +105,11 @@ class UserMgr:
         Returns:
             Boolean : True of false depending on if it is allowed
         """
-        if len(input)>32:
+        if len(userinput) > 16:
             return False
-        with open(src("data/usernameblacklist.txt"),"r",encoding="utf-8") as blacklist:
+        with open(src("data/usernameblacklist.txt"), "r", encoding="utf-8") as blacklist:
             for line in blacklist:
-                if line in input:
+                if line in userinput:
                     return False
             blacklist.close()
         return True

@@ -14,13 +14,13 @@ Olla pienelle yhteisölle (esimerkiksi Matrix Ry) pelistä saatujen piesteiden s
 -	Käyttäjän lisäys-toiminto ✅
 	-	Jos käyttäjänimeä ei ole aikaisemmin rekisteröity, se luo käyttäjän✅
 	-	Jos käyttäjänimi on jo aikaisemmin luotu, se ei luo käyttäjää✅
-	-	Whitespacen poisto-toiminto
-	-	Admin-käyttäjää ei voi luoda tai jonkinlainen blacklist.
+	-	Whitespacen poisto-toiminto✅
+	-	Admin-käyttäjää ei voi luoda tai jonkinlainen blacklist.✅
 -	Tuloksien lisäys-toiminto ✅
 	-	Jos käyttäjänimeä ei ole, se ei lisää tulosta✅
 	-	Jos käyttäjälle on rekisteröity jo parempi tulos, sovellus silti näyttää vain käyttäjän parhaimman tuloksen✅
 -	Pistetaulun päivittyminen oikeassa järjestyksessä✅
--	Kellonaika näkyville pistetaulukkoon.
+-	Kellonaika näkyville pistetaulukkoon.✅
 
 
 ## Käyttöliittymäluonnos

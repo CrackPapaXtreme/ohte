@@ -1,5 +1,17 @@
 # Changelog
 
+## Viikko 7
+-   Käyttäjätunnusta luodessa whitespace nyt poistuu
+-   Nyt voi saada komentokehotteeseen listan rekisteröityneistä käyttäjistä painamalla `Create new user!`-nappia tyhjällä tekstikentällä
+-   src-hakemistoa järjestelty
+    -   .py-tiedostojen koodia muutettu toimiakseen uuden järjestelyn kanssa
+    -   `data`-hakemisto nyt sisältää kaikki pelin muodostama ja käytettävä data
+    -   `services`-hakemisto sisältää moduulit, jotka käsittelevät pelin dataa
+    -   `ui`-hakemisto sisältää käyttöliittymää koskevan koodin
+    -   `misc`-hakemisto sisältää muut pienohjelmat, jotka eivät ansaitse omaa hakemistoa
+-   Uutta peliä ei voi enää tehdä, jos on samanniminen peli jo olemassa
+-   Tuloksissa nyt näkyy kellonaikakin.
+
 ## Viikko 6
 -   Siistitty käyttöliittymää vähän.
 

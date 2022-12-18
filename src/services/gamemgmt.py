@@ -15,7 +15,7 @@ class GameMgr:
             title: the title name of whatever game you want to create
         """
         if self.check_if_game_exists(title):
-            return None
+            return
         gameid = len(os.listdir(src("data/games/")))+1
         os.mkdir(src(f"data/games/{gameid}"))
 
@@ -54,13 +54,10 @@ class GameMgr:
     def delete_all_games(self):
         """This function is used for setting up the program and also in tests.
         """
-        try:
-            shutil.rmtree(src("data/games"))
-        except:
-            pass
+        shutil.rmtree(src("data/games"))
         os.mkdir(src("data/games"))
 
-    def check_if_game_exists(self, title:str):
+    def check_if_game_exists(self, title: str):
         """Checks to see if a game has already been created with the same name
 
         Args:
@@ -71,6 +68,6 @@ class GameMgr:
         """
         gamelist = self.game_json_list()
         for game in gamelist:
-            if title.lower()==game["title"].lower():
+            if title.lower() == game["title"].lower():
                 return True
         return False

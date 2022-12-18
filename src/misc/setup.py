@@ -1,17 +1,18 @@
 from shutil import rmtree
 from os import mkdir
-from dir import src
+try:
+    from misc.dir import src
+except ModuleNotFoundError:
+    from dir import src
+
 
 def format_program():
     """Deletes all games and resets the users to make the program ready for first time use.
     """
-    try:
-        rmtree(src("data"))
-    except:
-        pass
+    rmtree(src("data"))
     mkdir(src("data"))
     mkdir(src("data/games"))
-    with open(src("data/users.json"),"w", encoding="utf-8") as usersjson:
+    with open(src("data/users.json"), "w", encoding="utf-8") as usersjson:
         usersjson.write("[]")
         usersjson.close()
     with open(src("data/adminpassword.txt"), "w", encoding="utf-8") as adminpasswordfile:
@@ -22,8 +23,6 @@ def format_program():
         blacklist.close()
 
 
-
-
 # This is here so that the function gets executes with poetry run invoke setup
-if __name__=="__main__":
+if __name__ == "__main__":
     format_program()

@@ -8,6 +8,7 @@ UMgr = UserMgr()
 GMgr = GameMgr()
 SMgr = ScoreMgr()
 
+
 class MainMenu(tk.Frame):
     def __init__(self, parent, controller):
         """Initializes the sub-window with content in it. The other arguments are for
@@ -33,14 +34,6 @@ class MainMenu(tk.Frame):
         self.ui_game_buttons()
 
         self.ui_add_game()
-
-    def ui_notification(self, text:str):
-        text = self.controller.notification
-        tk.Label(
-            self,
-            text = self.controller.notification,
-            font = self.controller.normal_font
-        ).grid(row=0, column = 2, sticky="ew")
 
     def ui_title(self):
         """Draws the app title on the top left "Highscores!"
@@ -90,8 +83,6 @@ class MainMenu(tk.Frame):
         )
         self._username_field.grid(row=0, column=3, sticky="e", padx=10)
         submit_new_username.grid(row=0, column=4, sticky="w", padx=10)
-        self.ui_notification("Success")
-
 
     def ui_game_buttons(self):
         """Using a for loop and variables, it draws 5 buttons each row for as long

@@ -1,5 +1,5 @@
 # Työaikakirjanpito
-### Työtunteja yhteensä: 41
+### Työtunteja yhteensä: 45
 |Päivä|Työtunnit|Mitä tein|
 |---|---|---|
 |Su 13.11.|1|Vaatimusmäärittely|
@@ -11,3 +11,4 @@
 |La 3.12.|5|Kehitin pääosin käyttöliittymää tänään. Nyt sovellus automaattisesti luo napit peleihin sen mukaan, mitä pelejä on. Napit ja tekstikentät ovat nyt hyvissä paikoissa. Dokumentaatio|
 |Su 4.12.|11|Käyttöliittymä valmiiksi ja tämän viikon dokumentaatio.|
 |Ma 12.12.|4|Dokumentaatio ja koodin siistiminen.|
+|SU 18.12.|4|Koodin siistiminen. Sovellushakemistojen organisoiminen. Muutama uusi ominaisuus. Dokumentaatio.|

@@ -30,4 +30,4 @@ def setup(ctx):
 
 @task
 def gen(ctx):
-    ctx.run("python src/misc/somegen.py", pty=True)
+    ctx.run("python src/gen.py", pty=True)

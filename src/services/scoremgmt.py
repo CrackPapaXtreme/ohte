@@ -5,7 +5,7 @@ from misc.dir import src
 
 
 class ScoreMgr:
-    def add_score(self, gameid, userid, score):
+    def add_score(self, gameid, userid, score: int):
         """Adds score to scores.csv with the current date.
 
         Args:
@@ -13,7 +13,7 @@ class ScoreMgr:
             userid : Specifies which user is submitting the score.
             score : Score to submit.
         """
-        time_now = datetime.now().strftime("%d.%m.%Y")
+        time_now = datetime.now().strftime("%H:%M     %d.%m.%Y")
         with open(src(f"data/games/{gameid}/scores.csv"), "a", encoding="utf-8") as scoresheet:
             writer = csv.writer(scoresheet)
             writer.writerow([userid, time_now, score])
