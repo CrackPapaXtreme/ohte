@@ -18,7 +18,6 @@ Käyttäkää vähintään python-versiota ```3.8``` linuxilla.
 
 [Arkkitehtuuri](https://github.com/CrackPapaXtreme/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
-
 ## Asennus ja käyttöönotto
 
 __1. Lataa__ ja __pura__ viimeisimmän releasen lähdekoodi koneellesi johonkin hakemistoon ja avaa sinne komentokehote.
