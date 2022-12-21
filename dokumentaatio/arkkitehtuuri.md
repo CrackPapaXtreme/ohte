@@ -167,4 +167,4 @@ UI->>UI: show_frame(0)
 ```
 
 ## Parannettavaa rakenteesta
-Huomasin nopeasti, että olisi voinut hoitaa datan käsittelyn monella eri tavalla yksinkertaisemmin. Pelien ID:hin perustuvan nimeämissääntö on hyvä tässä, mutta olisi varmaan ollut mahdollista saada kaikki pistetaulukkoon liittyvä informaatio yhteen csv:hen. Sovellus tekee paljon tarpeetonta käyttäjäID:n ja käyttäjänimen välillä tarkistamista. Veikkaan, että käyttäjäID:t eivät loppujen lopuksi ollut niin tarpeellisia.
+Huomasin nopeasti, että olisi voinut hoitaa datan käsittelyn monella eri tavalla yksinkertaisemmin. Pelien ID:hin perustuvan nimeämissääntö on hyvä tässä, mutta olisi varmaan ollut mahdollista saada kaikki pistetaulukkoon liittyvä informaatio yhteen csv:hen tai sqliteen. Sovellus tekee paljon tarpeetonta käyttäjäID:n ja käyttäjänimen välillä tarkistamista. Veikkaan, että käyttäjäID:t eivät loppujen lopuksi ollut niin tarpeellisia.
